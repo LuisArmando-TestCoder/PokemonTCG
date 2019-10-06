@@ -1,7 +1,5 @@
 import React from 'react';
 
-export default ({card, click}) =>
+export default ({name, imageUrl}) =>
 
-<img onClick={click}
-    alt={card.name}
-    src={card.imageUrl}/>
+<img alt={name} src={imageUrl}/>
