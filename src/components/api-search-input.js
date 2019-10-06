@@ -10,6 +10,10 @@ export default ({ search, showJson, apiBase, display }) => {
                     setValue(e.target.value);
                     search(value);
                 }}
+                onChange={(e) => {
+                    setValue(e.target.value);
+                    search(value);
+                }}
                 type='text'/>
             <button onClick={() => {
                 search();

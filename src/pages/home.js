@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 
 import ApiSearchInput from '../components/api-search-input';
 import ApiResults from '../components/api-results';
+import CardImage from '../components/card-image';
 
 const Home = () => {
-    const apiBase = 'https://api.pokemontcg.io/v1/';
     const [results, setResults] = useState([]);
+    const apiBase = 'https://api.pokemontcg.io/v1/';
     let isJson = false;
     let jsonResponse = '';
 
@@ -14,7 +15,12 @@ const Home = () => {
             jsonResponse = response;
             if(jsonResponse && !isJson)
                 setResults(response.cards.map((card, i) => 
-                    <img alt={card.name} key={i} src={card.imageUrl}/>
+                    <CardImage
+                        key={i}
+                        click={() => {
+                            isJson = true;
+                            displayResults(`cards/${card.id}`);
+                        }} card={card}/>
                 ));
             else if(jsonResponse)
                 setResults(JSON.stringify(response, null, 2)
