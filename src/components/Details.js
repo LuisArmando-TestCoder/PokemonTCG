@@ -6,12 +6,12 @@ export default (props) => {
     return (
         <div className='details'>
             <Card onClick={props.click} {...props}/>
-            <div>
+            <div className='details__wrapper'>
                 {
                     Object.keys(props)
                         .filter(prop => typeof props[prop] === 'string')
                         .map(prop => 
-                            <p key={prop}>
+                            <p className={`wrapper__${prop}`} key={prop}>
                                 <b>{prop}:</b> {props[prop]}
                             </p>
                         )
