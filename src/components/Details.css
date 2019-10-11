@@ -1,0 +1,13 @@
+.details {
+    padding: 25px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr;
+}
+
+
+@media (min-width: 1080px) {
+    .details {
+        grid-template-columns: 400px 1fr;
+    }
+}

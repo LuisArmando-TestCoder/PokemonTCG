@@ -1,0 +1,11 @@
+.card {
+    padding: 25px;
+    background: #0000;
+    border: 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card:focus, .card:hover {
+    transform: scale(1.1);
+}
