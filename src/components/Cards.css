@@ -10,10 +10,10 @@
     grid-gap: 25px;
 }
 
-.cards-wrapper input {
+.cards-wrapper > input {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     margin: 50px 50px 0;
     padding: 5px 10px;
 }

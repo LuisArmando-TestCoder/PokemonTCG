@@ -9,3 +9,12 @@
 .card:focus, .card:hover {
     transform: scale(1.1);
 }
+
+.btn-favorite {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+    margin: auto;
+    display: block;
+}
