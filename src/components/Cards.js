@@ -13,7 +13,7 @@ export default () => {
     const [details, setDetails] = useState('');
     const [favoriteCards, setFavoriteCards] = useState([]);
     const [doShow, setDoShow] = useState(false);
-
+    // warning, buggy
     if (willBegin) fetchCards().then(({ cards }) => { 
         willBegin = false;
         setCards(cards)
