@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
-export default ({ imageUrl, name, click, toggleShow }) =>
-
+export default (props) =>
 <div>
     <input type="checkbox" className="btn-favorite" 
-        onChange={e => toggleShow(e.target.checked)}/>
-    <button className="card" onClick={click}>
-        <img src={imageUrl} name={name} alt={name}/>
-    </button>
+        onChange={e => props.toggleShow(e.target.checked)}/>
+    <Link to={{ pathname: `/details/${props.id}`, props }}>
+        <button className="card" onClick={props.click}>
+            <img src={props.imageUrl} name={props.name} alt={props.name}/>
+        </button>
+    </Link>
 </div>
